@@ -9,50 +9,35 @@ public class MainPage {
         this.webDriver = webDriver;
     }
     private final WebDriver webDriver;
-
     //локатор для печеньки
-    private By cookieButton = By.id("rcc-confirm-button");
-
-
-
-    //метод для нажатия печеньки (он же наш баг)
-    public void clickCookieButton() {
-        webDriver.findElement(cookieButton).click();
-    }
-
+    private final By cookieButton = By.id("rcc-confirm-button");
     //кнопка "заказать" вверху страницы
-    private By upperOrderButton = By.className("Button_Button__ra12g");
-
+    private final By upperOrderButton = By.className("Button_Button__ra12g");
     //кнопка "заказать" внизу страницы
-    private By lowerOrderButton = By.className("Button_Middle__1CSJM");
-
+    private final By lowerOrderButton = By.className("Button_Middle__1CSJM");
     //локатор для 1-го выпадающего текста из списка "Вопросы о важном"
-    private By firstImportantQuestion = By.id("accordion__heading-0");
-
+    private final By firstImportantQuestion = By.id("accordion__heading-0");
     //локатор для 2-го выпадающего текста из списка "Вопросы о важном"
-    private By secondImportantQuestion = By.id("accordion__heading-1");
-
+    private final By secondImportantQuestion = By.id("accordion__heading-1");
     //локатор для 3-го выпадающего текста из списка "Вопросы о важном"
-    private By thirdImportantQuestion = By.id("accordion__heading-2");
-
+    private final By thirdImportantQuestion = By.id("accordion__heading-2");
     //локатор для 4-го выпадающего текста из списка "Вопросы о важном"
-    private By fourthImportantQuestion = By.id("accordion__heading-3");
-
+    private final By fourthImportantQuestion = By.id("accordion__heading-3");
     //локатор для 5-го выпадающего текста из списка "Вопросы о важном"
-    private By fifthImportantQuestion = By.id("accordion__heading-4");
-
+    private final By fifthImportantQuestion = By.id("accordion__heading-4");
     //локатор для 6-го выпадающего текста из списка "Вопросы о важном"
-    private By sixthImportantQuestion = By.id("accordion__heading-5");
-
+    private final By sixthImportantQuestion = By.id("accordion__heading-5");
     //локатор для 7-го выпадающего текста из списка "Вопросы о важном"
-    private By seventhImportantQuestion = By.id("accordion__heading-6");
-
+    private final By seventhImportantQuestion = By.id("accordion__heading-6");
     //локатор для 8-го выпадающего текста из списка "Вопросы о важном"
     private By eighthImportantQuestion = By.id("accordion__heading-7");
 
-
     public void open(){
         webDriver.get("https://qa-scooter.praktikum-services.ru");
+    }
+    //метод для нажатия печеньки (он же наш баг)
+    public void clickCookieButton() {
+        webDriver.findElement(cookieButton).click();
     }
     //нажимаем на кнопку "заказать" вверху страницы
     public void clickOnUpperOrderButton(){
@@ -66,12 +51,10 @@ public class MainPage {
     public void clickOnFirstImportantQuestion(){
         webDriver.findElement(firstImportantQuestion).click();
     }
-
     //нажимаем на первую 2-ю стрелочку в блоке "Вопросы о важном"
     public void clickOnSecondImportantQuestion(){
         webDriver.findElement(secondImportantQuestion).click();
     }
-
     //нажимаем на первую 3-ю стрелочку в блоке "Вопросы о важном"
     public void clickOnThirdImportantQuestion(){
         webDriver.findElement(thirdImportantQuestion).click();
@@ -96,5 +79,4 @@ public class MainPage {
     public void clickOnEighthImportantQuestion(){
         webDriver.findElement(eighthImportantQuestion).click();
     }
-
 }

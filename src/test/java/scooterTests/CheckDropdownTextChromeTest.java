@@ -4,7 +4,7 @@ import org.junit.Test;
 import ru.praktikum.yandex.DropdownTextStatus;
 import ru.praktikum.yandex.MainPage;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class CheckDropdownTextChromeTest extends TestBaseChrome {
 
@@ -16,8 +16,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnFirstImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isFirstDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Сутки — 400 рублей. Оплата курьеру — наличными или картой.",
+                dropdownTextStatus.isFirstDropdownTextDisplayed());
     }
 
     @Test
@@ -28,8 +28,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnSecondImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isSecondDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.",
+                dropdownTextStatus.isSecondDropdownTextDisplayed());
     }
 
     @Test
@@ -40,8 +40,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnThirdImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isThirdDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.",
+                dropdownTextStatus.isThirdDropdownTextDisplayed());
     }
 
     @Test
@@ -52,8 +52,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnFourthImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isFourthDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Только начиная с завтрашнего дня. Но скоро станем расторопнее.",
+                dropdownTextStatus.isFourthDropdownTextDisplayed());
     }
 
     @Test
@@ -64,8 +64,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnFifthImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isFifthDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.",
+                dropdownTextStatus.isFifthDropdownTextDisplayed());
     }
 
     @Test
@@ -76,8 +76,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnSixthImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isSixthDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.",
+                dropdownTextStatus.isSixthDropdownTextDisplayed());
     }
 
     @Test
@@ -88,8 +88,8 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnSeventhImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isSeventhDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.",
+                dropdownTextStatus.isSeventhDropdownTextDisplayed());
     }
 
     @Test
@@ -100,7 +100,7 @@ public class CheckDropdownTextChromeTest extends TestBaseChrome {
         mainPage.clickOnEighthImportantQuestion();
 
         DropdownTextStatus dropdownTextStatus = new DropdownTextStatus(driver);
-        boolean isDisplayed = dropdownTextStatus.isEighthDropdownTextDisplayed();
-        assertTrue(isDisplayed);
+        assertEquals("Да, обязательно. Всем самокатов! И Москве, и Московской области.",
+                dropdownTextStatus.isEighthDropdownTextDisplayed());
     }
 }

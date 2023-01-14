@@ -1,14 +1,7 @@
 package scooterTests;
 
 import org.junit.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.praktikum.yandex.*;
-
-import java.time.Duration;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertTrue;
 
 public class CheckOrderUpperButtonTest extends TestBaseChrome{
 

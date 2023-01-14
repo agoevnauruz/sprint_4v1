@@ -1,5 +1,6 @@
 package ru.praktikum.yandex;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,7 +10,7 @@ public class OrderStatus {
     }
     private final WebDriver webDriver;
 
-    private final By orderInformation = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    private final By orderInformation = By.xpath(".//div[contains(@class, 'Order_ModalHeader')]");
     public boolean orderStatusText() {
         return webDriver.findElement(orderInformation).isDisplayed();
     }

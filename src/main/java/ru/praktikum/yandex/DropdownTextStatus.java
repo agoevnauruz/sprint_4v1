@@ -9,7 +9,7 @@ public class DropdownTextStatus {
     }
     private final WebDriver webDriver;
     //локатор 1-го выпавшего текста
-    public By firstDropdownText = By.xpath(".//div[@id='accordion__panel-0']/p");
+    private By firstDropdownText = By.xpath(".//div[@id='accordion__panel-0']/p");
 
     //локатор 2-го выпавшего текста
     private By secondDropdownText = By.xpath(".//div[@id='accordion__panel-1']/p");
@@ -32,35 +32,35 @@ public class DropdownTextStatus {
     //локатор 8-го выпавшего текста
     private By eighthDropdownText = By.xpath(".//div[@id='accordion__panel-7']/p");
 
-    public boolean isFirstDropdownTextDisplayed(){
-        return webDriver.findElement(firstDropdownText).isDisplayed();
+    public String isFirstDropdownTextDisplayed(){
+        return webDriver.findElement(firstDropdownText).getText();
     }
 
-    public boolean isSecondDropdownTextDisplayed(){
-        return webDriver.findElement(secondDropdownText).isDisplayed();
+    public String isSecondDropdownTextDisplayed(){
+        return webDriver.findElement(secondDropdownText).getText();
     }
 
-    public boolean isThirdDropdownTextDisplayed(){
-        return webDriver.findElement(thirdDropdownText).isDisplayed();
+    public String isThirdDropdownTextDisplayed(){
+        return webDriver.findElement(thirdDropdownText).getText();
     }
 
-    public boolean isFourthDropdownTextDisplayed(){
-        return webDriver.findElement(fourthDropdownText).isDisplayed();
+    public String isFourthDropdownTextDisplayed(){
+        return webDriver.findElement(fourthDropdownText).getText();
     }
 
-    public boolean isFifthDropdownTextDisplayed(){
-        return webDriver.findElement(fifthDropdownText).isDisplayed();
+    public String isFifthDropdownTextDisplayed(){
+        return webDriver.findElement(fifthDropdownText).getText();
     }
 
-    public boolean isSixthDropdownTextDisplayed(){
-        return webDriver.findElement(sixthDropdownText).isDisplayed();
+    public String isSixthDropdownTextDisplayed(){
+        return webDriver.findElement(sixthDropdownText).getText();
     }
 
-    public boolean isSeventhDropdownTextDisplayed(){
-        return webDriver.findElement(seventhDropdownText).isDisplayed();
+    public String isSeventhDropdownTextDisplayed(){
+        return webDriver.findElement(seventhDropdownText).getText();
     }
 
-    public boolean isEighthDropdownTextDisplayed(){
-        return webDriver.findElement(eighthDropdownText).isDisplayed();
+    public String isEighthDropdownTextDisplayed(){
+        return webDriver.findElement(eighthDropdownText).getText();
     }
 }

@@ -3,6 +3,9 @@ package scooterTests;
 import org.junit.Test;
 import ru.praktikum.yandex.*;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class CheckOrderLowerButtonTest extends TestBaseChrome{
 
     @Test
@@ -32,5 +35,6 @@ public class CheckOrderLowerButtonTest extends TestBaseChrome{
 
         OrderStatus orderStatus = new OrderStatus(driver);
         orderStatus.orderStatusText();
+
     }
 }

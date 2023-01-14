@@ -13,7 +13,7 @@ public class ConfirmOrder {
     private final WebDriver webDriver;
 
 
-    private By yesButton = By.xpath("//button[text()='Да']");
+    private By yesButton = By.xpath(".//*[text()='Да']");
 
     public void clickYesButton(){
         webDriver.findElement(yesButton).click();
